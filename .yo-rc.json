@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "minotaur",
+    "style": "css",
+    "postcss": true
+  }
+}
