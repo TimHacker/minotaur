@@ -30,12 +30,12 @@ class UserInfoComponent extends React.Component {
       <div className="userinfo-component">
         <h2>Key Information</h2>
         <input type="text" placeholder="Name" />
-        <label htmlFor="sessionType">Session Type:</label>
+        <label htmlFor="sessionType">Prison name:</label>
         <select id="sessionType">
           <option></option>
-          <option value="prison">Prison</option>
-          <option value="postRelease">Post Release</option>
-          <option value="visit">Visit</option>
+          <option>Eastwood Park</option>
+          <option>Bristol</option>
+          <option>Guys Marsh</option>
         </select>
         <br />
         <label>From:</label>
