@@ -12,18 +12,28 @@ require('styles/sessionScreen/UserInfo.css');
 class UserInfoComponent extends React.Component {
 //Next step is to get the date pickers working!
 //https://github.com/Hacker0x01/react-datepicker
-  // getInitialState() {
-  //   return {
-  //     startDate: moment(),
-  //     endDate: moment()
-  //   };
-  // }
-  //
-  // handleChange(date) {
-  //   this.setState({
-  //     startDate: date
-  //   });
-  // }
+  constructor() {
+    super();
+    this.state = {
+      startDate: moment(),
+      endDate: moment()
+    }
+
+    this.handleStartDateChange = this.handleStartDateChange.bind(this);
+    this.handleEndDateChange = this.handleEndDateChange.bind(this);
+  }
+
+  handleStartDateChange(date) {
+    this.setState({
+      startDate: date
+    });
+  }
+
+  handleEndDateChange(date) {
+    this.setState({
+      endDate: date
+    });
+  }
 
   render() {
     return (
@@ -40,13 +50,13 @@ class UserInfoComponent extends React.Component {
         <br />
         <label>From:</label>
         <DatePicker
-            // selected={this.state.startDate}
-            // onChange={this.handleChange}
+             selected={this.state.startDate}
+             onChange={this.handleStartDateChange}
             />
         <label>To:</label>
         <DatePicker
-            // selected={this.state.endDate}
-            // onChange={this.handleChange}
+             selected={this.state.endDate}
+             onChange={this.handleEndDateChange}
             />
       </div>
     );
