@@ -16,7 +16,8 @@ class UserInfoComponent extends React.Component {
     super();
     this.state = {
       startDate: moment(),
-      endDate: moment()
+      endDate: moment(),
+      dateFormat: 'DD/MM/YYYY'
     }
 
     this.handleStartDateChange = this.handleStartDateChange.bind(this);
@@ -52,11 +53,13 @@ class UserInfoComponent extends React.Component {
         <DatePicker
              selected={this.state.startDate}
              onChange={this.handleStartDateChange}
+             dateFormat={this.state.dateFormat}
             />
         <label>To:</label>
         <DatePicker
              selected={this.state.endDate}
              onChange={this.handleEndDateChange}
+             dateFormat={this.state.dateFormat}
             />
       </div>
     );
